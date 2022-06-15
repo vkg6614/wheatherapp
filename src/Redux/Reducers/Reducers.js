@@ -1,33 +1,19 @@
-// const {
-//   CREATE_PRODUCT_LOADING,
-//   CREATE_PRODUCT_SUCCESS,
-//   CREATE_PRODUCT_FAIL,
-//   DELETE_SINGLE_CART,
-// } = require("../ActionTypes/ActionTypes");
+const {
+  GET_WEATHER_DATA_LOADING,
+  GET_WEATHER_DATA_SUCCESS,
+  GET_WEATHER_DATA_FAIL,
+} = require("../ActionTypes/ActionTypes");
 
-// export const cartReducer = (
-//   productData = JSON.parse(localStorage.getItem("getData")) || [],
-//   action
-// ) => {
-//   switch (action.type) {
-//     case CREATE_PRODUCT_LOADING:
-//       return productData;
-//     case CREATE_PRODUCT_SUCCESS:
-//       // var tempPro = productData.map((data) => data._id === action.payload._id);
+export const weatherReducer = (weatherData = [], action) => {
+  switch (action.type) {
+    case GET_WEATHER_DATA_LOADING:
+      return { loading: true, weatherData: [] };
+    case GET_WEATHER_DATA_SUCCESS:
+      return { loading: false, weatherData: action.payload };
+    case GET_WEATHER_DATA_FAIL:
+      return { loading: false, error: action.payload };
 
-//       localStorage.setItem(
-//         "getData",
-//         JSON.stringify([...productData, action.payload]) || []
-//       );
-//       return [...productData, action.payload];
-//     case CREATE_PRODUCT_FAIL:
-//       return action.payload;
-
-//     case DELETE_SINGLE_CART:
-//       let temp = productData.filter((data) => data._id !== action.payload);
-//       localStorage.setItem("getData", JSON.stringify(temp));
-//       return temp;
-//     default:
-//       return productData;
-//   }
-// };
+    default:
+      return weatherData;
+  }
+};
