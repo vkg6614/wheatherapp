@@ -1,6 +1,5 @@
 .weeklist-main-container {
   display: flex;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   overflow-x: scroll;
@@ -10,6 +9,7 @@
   text-align: center;
   border: 3px solid rgb(0, 166, 250);
   font-weight: bold;
+  margin-right: 10px;
   padding: 0 1.5em;
   cursor: pointer;
   background-color: rgb(255, 253, 247);
