@@ -1,12 +1,15 @@
 import React from "react";
 import "./WeatherDetails.css";
+import cloud from "../../Images/cloud.png";
 
 const WeatherDetails = () => {
   return (
     <div className="weatherDetails-main-container">
       <div className="temp-div">
-        <h1>43 C</h1>
-        <div>Clear</div>
+        <h1>43°C</h1>
+        <div>
+          <img src={cloud} alt="cloud" />
+        </div>
       </div>
       <div className="weatherDetails-graph-div">
         <div></div>

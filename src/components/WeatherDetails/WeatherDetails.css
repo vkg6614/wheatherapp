@@ -12,6 +12,13 @@
   display: flex;
   align-items: center;
 }
+.temp-div > div {
+  width: 30px;
+  margin-left: 1em;
+}
+.temp-div img {
+  width: 100%;
+}
 
 .weatherDetails-graph-div {
   height: 300px;
