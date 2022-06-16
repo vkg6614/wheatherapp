@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import "./App.css";
 // import CityLists from "./components/CityLists/CityLists";
 import Search from "./components/Search/Search";
+import WeatherDetails from "./components/WeatherDetails/WeatherDetails";
 import Weeklist from "./components/WeekList/Weeklist";
 // import { getWeatherAction } from "./Redux/Actions/Actions";
 
@@ -16,6 +17,7 @@ function App() {
       <Search />
       {/* <CityLists /> */}
       <Weeklist />
+      <WeatherDetails />
     </div>
   );
 }

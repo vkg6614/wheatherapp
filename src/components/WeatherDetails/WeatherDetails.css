@@ -1,0 +1,54 @@
+.weatherDetails-main-container {
+  border-radius: 8px;
+  box-shadow: 0 8px 10px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 10%),
+    0 -8px 12px 0 rgb(0 0 0 / 5%), 0 -2px 3px -2px rgb(0 0 0 / 1%);
+  padding: 10px 1em;
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+.temp-div {
+  display: flex;
+  align-items: center;
+}
+
+.weatherDetails-graph-div {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.pressure-div {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+.pressure-div > div {
+  background-color: rgb(243, 251, 255);
+  width: 48%;
+  font-size: 1.1rem;
+  padding: 0 0.8em;
+}
+
+.pressure-div > div p:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: -20px;
+  /* border: 1px solid black; */
+}
+
+.sunrise-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.sunrise-div > div p:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
+.weatherDetails-graph-2 {
+  height: 150px;
+  border: 1px solid black;
+}
