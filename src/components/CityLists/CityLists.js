@@ -1,11 +1,8 @@
 import React from "react";
 import Cities from "../Cities/Cities";
 import "./CityLists.css";
-import { useSelector } from "react-redux";
 
 const CityLists = () => {
-  const { weatherData, loading } = useSelector((state) => state.weatherReducer);
-
   return (
     <div>
       {Cities.map((currElem) => (
