@@ -7,8 +7,10 @@ const Weeklist = () => {
     <div className="weeklist-main-container">
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -16,8 +18,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -25,8 +29,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -34,8 +40,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -43,8 +51,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -52,8 +62,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -61,8 +73,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
@@ -70,8 +84,10 @@ const Weeklist = () => {
       </div>
       <div>
         <p>Thu</p>
-        <span>43 °</span>
-        <span>31 °</span>
+        <div>
+          <span>43 °</span>
+          <span>31 °</span>
+        </div>
         <div>
           <img src={cloud} alt="cloud" />
         </div>
