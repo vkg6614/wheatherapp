@@ -15,7 +15,7 @@
 }
 
 .weeklist-main-container > div {
-  width: 200px;
+  min-width: 50px;
   text-align: center;
   border: 3px solid rgb(0, 166, 250);
   font-weight: bold;
