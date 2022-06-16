@@ -2,6 +2,8 @@ const {
   GET_WEATHER_DATA_LOADING,
   GET_WEATHER_DATA_SUCCESS,
   GET_WEATHER_DATA_FAIL,
+  GET_LAT_LON_WEATHER_DATA_SUCCESS,
+  GET_LAT_LON_WEATHER_DATA_FAIL,
 } = require("../ActionTypes/ActionTypes");
 
 export const weatherReducer = (weatherData = [], action) => {
@@ -11,8 +13,11 @@ export const weatherReducer = (weatherData = [], action) => {
     case GET_WEATHER_DATA_SUCCESS:
       return { loading: false, weatherData: action.payload };
     case GET_WEATHER_DATA_FAIL:
-      return { loading: false, error: action.payload };
-
+      return { loading: false, error: "" };
+    case GET_LAT_LON_WEATHER_DATA_SUCCESS:
+      return { loading: false, weatherData: action.payload };
+    case GET_LAT_LON_WEATHER_DATA_FAIL:
+      return { loading: false, weatherData: [] };
     default:
       return weatherData;
   }

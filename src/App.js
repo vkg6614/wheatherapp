@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
+// import CityLists from "./components/CityLists/CityLists";
 import Search from "./components/Search/Search";
-import { getWeatherAction } from "./Redux/Actions/Actions";
+import Weeklist from "./components/WeekList/Weeklist";
+// import { getWeatherAction } from "./Redux/Actions/Actions";
 
 function App() {
-  const dispatch = useDispatch();
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  // "lon":76.9681,"lat":29.3889}
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      setLatitude(position.coords.latitude);
-      setLongitude(position.coords.longitude);
-      dispatch(getWeatherAction(latitude, longitude));
-    });
-  }, [dispatch, latitude, longitude]);
+  // const dispatch = useDispatch();
 
   return (
     <div className="App">
       <Search />
+      {/* <CityLists /> */}
+      <Weeklist />
     </div>
   );
 }

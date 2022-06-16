@@ -12,8 +12,3 @@ const store = createStore(
 );
 
 export default store;
-{
-  /* <span class="material-symbols-sharp">partly_cloudy_day</span>; */
-  //   <span class="material-symbols-sharp">cloudy_snowing</span>;
-  //
-}
