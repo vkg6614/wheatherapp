@@ -1,21 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import getFormattedWeatherData from "../../services/WeatherServices";
 import Cities from "../Cities/Cities";
 import "./CityLists.css";
 
 const CityLists = () => {
-  return (
-    <div>
-      {Cities.map((currElem) => (
-        <div>
-          <div>
-            <p>{currElem.city}</p>
-            <p>{currElem.state}</p>
-          </div>
-          <div></div>
-        </div>
-      ))}
-    </div>
-  );
+  return <div>CityLists</div>;
 };
 
 export default CityLists;

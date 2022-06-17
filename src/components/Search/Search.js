@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Search.css";
 
-const Search = () => {
-  const handlesearchOnChange = (e) => {
-    console.log(e, "on");
+const Search = ({ setQuery, units, setUnits }) => {
+  const [city, setCity] = useState("");
+
+  useEffect(() => {
+    findLocation();
+  }, []);
+
+  const findLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function success(position) {
+          let lat = position.coords.latitude;
+          let lon = position.coords.longitude;
+          setQuery({ lat, lon });
+        },
+        function error(error_message) {
+          console.error(
+            "An error has occured while retrieving location",
+            error_message
+          );
+        }
+      );
+    } else {
+      console.log("geolocation is not enabled on this browser");
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      if (city !== "") {
+        setQuery({ q: city });
+      }
+      setCity("");
+    }
   };
 
   return (
@@ -15,7 +46,9 @@ const Search = () => {
           type="search"
           placeholder="search"
           name="search"
-          onChange={handlesearchOnChange}
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <span className="material-icons">search</span>
       </div>
