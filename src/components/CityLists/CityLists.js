@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import getFormattedWeatherData from "../../services/WeatherServices";
-import Cities from "../Cities/Cities";
+import React from "react";
 import "./CityLists.css";
 
 const CityLists = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Search.css";
 
-const Search = ({ setQuery, units, setUnits }) => {
+const Search = ({ setQuery }) => {
   const [city, setCity] = useState("");
 
   useEffect(() => {

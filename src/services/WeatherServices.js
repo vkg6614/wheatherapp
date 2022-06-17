@@ -3,12 +3,9 @@ import { DateTime } from "luxon";
 const API_KEY = "aba6ff9d6de967d5eac6fd79114693cc";
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
-// https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-
 const getWeatherData = (infoType, searchParams) => {
   const url = new URL(BASE_URL + "/" + infoType);
   url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
-  //   console.log(url);
   return fetch(url).then((res) => res.json());
 };
 
@@ -75,10 +72,6 @@ const getFormattedWeatherData = async (searchParams) => {
     "weather",
     searchParams
   ).then(formatCurrentWeather);
-
-  //   geolocation
-
-  //   geolocation
 
   const { lat, lon } = formattedCurrentWeather;
 

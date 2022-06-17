@@ -1,8 +1,3 @@
-// import { useSelector } from "react-redux";
-// import axios from "axios";
-
-import getFormattedWeatherData from "../../services/WeatherServices";
-
 const Cities = [
   {
     city: "Delhi",
