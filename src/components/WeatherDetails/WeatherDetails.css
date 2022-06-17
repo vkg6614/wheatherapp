@@ -21,10 +21,11 @@
 }
 
 .weatherDetails-graph-div {
-  width: 100%;
+  width: 98%;
+  margin: 10px auto;
+  border: 1px solid black;
   height: 300px;
   overflow: scroll;
-  padding: 20px 1em;
 }
 
 .pressure-div {
