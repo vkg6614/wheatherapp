@@ -31,7 +31,7 @@ const WeatherDetails = ({
         </div>
       </div>
       <div className="weatherDetails-graph-div">
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%">
           <LineChart data={weather.hourly}>
             <CartesianGrid />
             <XAxis width={2} dataKey="title" interval={"preserveStartEnd"} />
