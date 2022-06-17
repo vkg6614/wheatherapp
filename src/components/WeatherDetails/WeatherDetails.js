@@ -3,10 +3,13 @@ import "./WeatherDetails.css";
 import cloud from "../../Images/cloud.png";
 import sunny from "../../Images/sunny.png";
 import { formatToLocalTime } from "../../services/WeatherServices";
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 
 const WeatherDetails = ({
+  weather,
   weather: { sunrise, sunset, main, temp, humidity, pressure, timezone },
 }) => {
+  console.log(weather, "we");
   return (
     <div className="weatherDetails-main-container">
       <div className="temp-div">
@@ -19,8 +22,13 @@ const WeatherDetails = ({
         </div>
       </div>
       <div className="weatherDetails-graph-div">
-        <div></div>
-        <div></div>
+        <ResponsiveContainer width="100%">
+          <LineChart data={weather.hourly}>
+            <XAxis dataKey="title" interval={"preserveStartEnd"} />
+            <YAxis />
+            <Line dataKey="temp" />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
       <div className="pressure-div">
         <div>

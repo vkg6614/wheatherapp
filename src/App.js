@@ -21,7 +21,6 @@ function App() {
     fetchWeather();
   }, [query]);
 
-  console.log(weather, "wheate");
   return (
     <div className="App">
       <Search setQuery={setQuery} />
