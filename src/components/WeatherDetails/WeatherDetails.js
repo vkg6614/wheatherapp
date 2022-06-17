@@ -36,7 +36,7 @@ const WeatherDetails = ({
             width={730}
             height={250}
             data={weather.hourly}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="title" />
@@ -44,7 +44,6 @@ const WeatherDetails = ({
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="temp" stroke="#8884d8" />
-            {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
           </LineChart>
         </ResponsiveContainer>
       </div>
