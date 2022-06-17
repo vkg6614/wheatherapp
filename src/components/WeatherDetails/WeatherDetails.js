@@ -31,7 +31,7 @@ const WeatherDetails = ({
         </div>
       </div>
       <div className="weatherDetails-graph-div">
-        <ResponsiveContainer width="100%">
+        <ResponsiveContainer>
           <LineChart data={weather.hourly}>
             <CartesianGrid />
             <XAxis width={2} dataKey="title" interval={"preserveStartEnd"} />
@@ -62,7 +62,6 @@ const WeatherDetails = ({
           <p>{formatToLocalTime(sunset, timezone, "hh:mm")}pm</p>
         </div>
       </div>
-      <div className="weatherDetails-graph-2"></div>
     </div>
   );
 };

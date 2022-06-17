@@ -25,7 +25,6 @@
   min-width: 400px;
   overflow: scroll;
   padding: 20px 1em;
-  border: 1px solid black;
 }
 
 .pressure-div {
@@ -56,9 +55,4 @@
 .sunrise-div > div p:nth-child(1) {
   font-weight: bold;
   margin-bottom: -20px;
-}
-
-.weatherDetails-graph-2 {
-  height: 150px;
-  border: 1px solid black;
 }

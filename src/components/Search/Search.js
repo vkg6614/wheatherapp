@@ -44,7 +44,7 @@ const Search = ({ setQuery }) => {
 
         <input
           type="search"
-          placeholder="search"
+          placeholder="search...."
           name="search"
           value={city}
           onChange={(e) => setCity(e.target.value)}
