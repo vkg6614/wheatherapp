@@ -3,7 +3,16 @@ import "./WeatherDetails.css";
 import cloud from "../../Images/cloud.png";
 import sunny from "../../Images/sunny.png";
 import { formatToLocalTime } from "../../services/WeatherServices";
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
+import {
+  ResponsiveContainer,
+  LineChart,
+  Tooltip,
+  Line,
+  Legend,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+} from "recharts";
 
 const WeatherDetails = ({
   weather,
@@ -24,9 +33,12 @@ const WeatherDetails = ({
       <div className="weatherDetails-graph-div">
         <ResponsiveContainer width="100%">
           <LineChart data={weather.hourly}>
-            <XAxis dataKey="title" interval={"preserveStartEnd"} />
+            <CartesianGrid />
+            <XAxis width={2} dataKey="title" interval={"preserveStartEnd"} />
             <YAxis />
-            <Line dataKey="temp" />
+            <Tooltip contentStyle={{ fontWeight: "bold" }} />
+            <Legend />
+            <Line type="monotone" dataKey="temp" activeDot={{ r: 8 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>
