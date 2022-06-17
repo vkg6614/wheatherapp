@@ -11,9 +11,11 @@ function App() {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      await getFormattedWeatherData(query).then((data) => {
-        setWeather(data);
-      });
+      await getFormattedWeatherData({ ...query, units: "metric" }).then(
+        (data) => {
+          setWeather(data);
+        }
+      );
     };
 
     fetchWeather();
