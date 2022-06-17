@@ -22,6 +22,8 @@
 
 .weatherDetails-graph-div {
   height: 300px;
+  overflow: scroll;
+  padding: 20px 1em;
   border: 1px solid black;
 }
 
